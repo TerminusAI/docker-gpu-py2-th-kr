@@ -11,5 +11,7 @@ RUN pip --no-cache-dir install \
 # Keras
 RUN pip --no-cache-dir install git+git://github.com/fchollet/keras.git@${KERAS_VERSION}
 
+ENV KERAS_BACKEND theano
+
 WORKDIR "/root"
 CMD ["/bin/bash"]
